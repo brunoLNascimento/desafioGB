@@ -1,34 +1,32 @@
+const mongoose = require('mongoose');
+const Saller = mongoose.model('Saller');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 const { getError } = require('./../utils/getErros');
+const secret = process.env.JWT_SECRET;
 
 module.exports = {
-    async LoginController (req, res) {
-      try {
+  async LoginController (req, res) {
+    try {
+      const { email, password } = req.body;
+      const token = req.headers.authorization;
+      let user = await Saller.findOne({ email }).select('+password');
 
-        const { email, password } = req.body;
-        const user = await UserModel.findOne({ email }).select('+password');
-        const compare = await bcrypt.compare(password, user.password);
-    
-        if (!compare) {
-          throw new Error('user-or-password-incorrect');
-        }
-    
-        const userRoles = await UserRolesModel.findOne({ user: user._id });
-    
-        const secret = process.env.JWT_SECRET;
-        const payload = userRoles.toObject();
-        payload.userId = payload.user;
-        delete payload.user;
-        delete payload._id;
-        delete payload.__v;
-        const token = jwt.sign(payload, secret);
-    
-        res.status(200).send({ accessToken: token });
-      } catch (error) {
-        console.log(error)
-        const e = getError(error)
-        res.status(e.code).json(e);
+      const compare = await bcrypt.compare(password, user.password);
+  
+      if (!compare) {
+        throw new Error('user-or-password-incorrect');
       }
+  
+      //ver se precisa comparar o token no login, acho q não
+      if(!token.includes(user.token))
+          throw new Error('token-incorrect');
+
+      return res.status(200).send({ accessToken: token });
+    } catch (error) {
+      console.log(error)
+      const e = getError(error)
+      return res.status(e.code).json(e);
     }
+  }
 }

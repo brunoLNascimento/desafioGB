@@ -3,6 +3,7 @@ const Saller = mongoose.model('Saller')
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 const { getError } = require('./../utils/getErros');
+const secret = process.env.JWT_SECRET;
 
 module.exports = {
 	async newSaller (req, res) {
@@ -10,11 +11,13 @@ module.exports = {
 			let { fullName, cpf, email, password } = req.body;
 			password = await bcrypt.hash(password, 10)   
 			
+			const token = jwt.sign(req.body, secret);
 			const saller = new Saller ({
 					fullName: fullName,
 					cpf: cpf,
 					email: email,
 					password: password,
+					token: token
 			})
 
 			const saved = await saller.save();

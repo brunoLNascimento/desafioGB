@@ -4,7 +4,7 @@ const express = require('express')
 const server = express()
 const consign = require('consign')
 const config = require('./app/infra/config')
-let urlMongo = config.db.url;
+let urlMongo = process.env.MONGO_STR;
 
 server.use(bodyParser.urlencoded({ extended: true }))
 server.use(bodyParser.json())
