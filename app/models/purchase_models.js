@@ -1,8 +1,8 @@
-import mongoose from 'mongoose';
+const mongoose = require('mongoose'),
+Schema = mongoose.Schema,
+autoincrement = require('mongoose-sequence')(mongoose);
 
-const Schema = mongoose.Schema;
-
-const PurchaseSchema = new Schema({
+const purcheses = new Schema({
   code: { type: String, required: true },
   value: { type: Number, required: true },
   date: { type: Date },
@@ -12,6 +12,11 @@ const PurchaseSchema = new Schema({
   collection: 'purcheses'
 });
 
-const SallerModel = mongoose.model('Purcheses', PurchaseSchema);
+purcheses.plugin(autoincrement, {inc_field: 'purcheses_id'}).set('toJSON', {
+    virtuals: true,
+    transform: (doc, ret, options) => {
+        delete ret._id;
+    },
+});
 
-export default SallerModel;
+mongoose.model('Purcheses', purcheses);

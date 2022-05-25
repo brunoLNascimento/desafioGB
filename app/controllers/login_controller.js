@@ -1,8 +1,6 @@
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 const { getError } = require('./../utils/getErros');
-const verifier = require('email-verifier');
-const Verifier = require('email-verifier');
 
 module.exports = {
     async LoginController (req, res) {

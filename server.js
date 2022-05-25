@@ -16,7 +16,7 @@ server.use(function(req, res, next) {
     next();
 });
 
-consign().include('app/model').then('app/worker').then('app/controllers').then('app/routes').then('app/config').into(server);
+consign().include('app/models').then('app/controllers').then('app/routes').then('app/infra').into(server);
 server.listen(port, function(){
     console.log(`Servidor rodando na porta: ${port}.`)
 })
