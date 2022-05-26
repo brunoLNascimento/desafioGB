@@ -5,7 +5,6 @@ const bcrypt = require('bcrypt');
 const { getError } = require('./../utils/getErros');
 const { all } = require('../../server');
 const secret = process.env.JWT_SECRET;
-mongoose.set('debug', true)
 
 module.exports = {
 	async newSaller (req, res) {

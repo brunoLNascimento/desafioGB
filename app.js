@@ -11,7 +11,6 @@ consign({cwd:'app'})
     .then('worker')
     .then('controllers')
     .then('routes')
-    .then('config')
     .into(app);
 
 module.exports = app;

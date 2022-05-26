@@ -3,7 +3,6 @@ const bodyParser = require('body-parser')
 const express = require('express')
 const server = express()
 const consign = require('consign')
-const config = require('./app/infra/config')
 let urlMongo = process.env.MONGO_STR;
 
 server.use(bodyParser.urlencoded({ extended: true }))
@@ -29,10 +28,8 @@ db.on('connecting', function() {
     console.log('MongoDB: Conectando...');
 });
 
-db.on('error', function(error) {
-    console.log('Error na conexão MongoDB: ' + error);
-    mongoose.connect(config.db.url, function(err) { 
-        if(err) mongoose.disconnect })
+db.on('error', function(error) { 
+    if(err) mongoose.disconnect 
 });
 
 db.on('connected', function() {

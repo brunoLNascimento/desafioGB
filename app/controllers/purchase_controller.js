@@ -1,6 +1,5 @@
 const moment = require('moment');
 const mongoose = require('mongoose');
-const { cashBack } = require('../infra/config');
 const Saller = mongoose.model('Saller');
 const Purschase = mongoose.model('Purschase');
 const { getError } = require('./../utils/getErros');
