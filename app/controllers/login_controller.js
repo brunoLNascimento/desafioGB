@@ -14,14 +14,8 @@ module.exports = {
 
       const compare = await bcrypt.compare(password, user.password);
   
-      if (!compare) {
-        throw new Error('user-or-password-incorrect');
-      }
+      if (!compare) throw new Error('user-or-password-incorrect');
   
-      //ver se precisa comparar o token no login, acho q não
-      if(!token.includes(user.token))
-          throw new Error('token-incorrect');
-
       return res.status(200).send({ accessToken: token });
     } catch (error) {
       console.log(error)

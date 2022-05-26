@@ -4,10 +4,11 @@ autoincrement = require('mongoose-sequence')(mongoose);
 
 const saller = new Schema({
   fullName: { type: String, required: true },
-  cpf: { type: String, max: 11, required: true },
+  cpf: { type: String, required: true, unique: true, max: 11  },
   email: { type: String, required: true, unique: true },
   password: { type: String, required: true },
   token: { type: String, required: true },
+  saller_id: { type: Number }
 },{
   collection: 'saller'
 });

@@ -10,7 +10,12 @@ const errors = {
 	'user-or-password-incorrect': {
 		code: 401,
 		message: 'user-or-password-incorrect'
+	},
+	'token is required': {
+		code: 401,
+		message: 'token is required'
 	}
+	
 }
 
 module.exports = {
