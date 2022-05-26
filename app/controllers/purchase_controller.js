@@ -15,7 +15,7 @@ module.exports = {
 			const userFound = await Saller.findOne({ saller_id }).select('+password');
 			if(!userFound) throw new Error("user not found");
 
-			if(!token.includes(userFound.token)) throw 'token-incorrect';
+			if(!token.includes(userFound.token)) throw new Error('token-incorrect');
 
 			let status = "Em Validação";
 			if(userFound.cpf == 15350946056) status = "Aprovado"

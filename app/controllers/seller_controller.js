@@ -2,14 +2,17 @@ const mongoose = require('mongoose');
 const Saller = mongoose.model('Saller')
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
-const { getError } = require('./../utils/getErros');
-const { all } = require('../../server');
 const secret = process.env.JWT_SECRET;
+const validator = require("email-validator");
+const { getError } = require('./../utils/getErros');
 
 module.exports = {
 	async newSaller (req, res) {
 		try {
 			let { fullName, cpf, email, password } = req.body;
+
+			let isValid = validator.validate(email);
+			if(!isValid) throw new Error("Email is not valid")
 		
 			await Promise.all([ 
 				Saller.find({ cpf: cpf }),  
