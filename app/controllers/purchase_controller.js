@@ -7,12 +7,12 @@ const { getError } = require('./../utils/getErros');
 module.exports = {
 	async newPurschase (req, res) {
 		try {
-		const token = req.headers.authorization;
+			const token = req.headers.authorization;
 			if(!token) throw new Error('token is required');
 
 			const { code, value, saller_id } = req.body;
 
-		const userFound = await Saller.findOne({ saller_id }).select('+password');
+			const userFound = await Saller.findOne({ saller_id }).select('+password');
 			if(!userFound) throw new Error("user not found");
 
 			if(!token.includes(userFound.token)) throw 'token-incorrect';
@@ -52,7 +52,6 @@ module.exports = {
 			if(cpf) query = { cpf: cpf }
 			else if(saller_id) query = { saller_id: saller_id };
 			
-
 			let found = []
 			let cashBackTotal = []
 			let cashBackValueTotal = 0
