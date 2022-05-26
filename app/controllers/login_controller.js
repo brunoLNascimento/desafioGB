@@ -1,9 +1,7 @@
 const mongoose = require('mongoose');
 const Saller = mongoose.model('Saller');
-const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 const { getError } = require('./../utils/getErros');
-const secret = process.env.JWT_SECRET;
 
 module.exports = {
   async LoginController (req, res) {
