@@ -13,7 +13,6 @@ module.exports = {
       if(!user) throw new Error("Please verify email or password");
 
       const compare = await bcrypt.compare(password, user.password);
-  
       if (!compare) throw new Error('user-or-password-incorrect');
   
       return res.status(200).send({ accessToken: token });

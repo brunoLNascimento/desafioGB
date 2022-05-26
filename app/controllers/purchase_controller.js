@@ -18,7 +18,7 @@ module.exports = {
 			if(!token.includes(userFound.token)) throw new Error('token-incorrect');
 
 			let status = "Em Validação";
-			if(userFound.cpf == 15350946056) status = "Aprovado";
+			if(userFound.doc == 15350946056) status = "Aprovado";
 			
 			let cashBack = cashBackValue(value);
 
@@ -26,7 +26,7 @@ module.exports = {
 				code: code,
 				value: value,
 				date: moment().format("DD/MM/YYYY - HH:mm:SS"),
-				cpf: userFound.cpf,
+				doc: userFound.doc,
 				saller_id: saller_id,
 				status: status,
 				cashBack: cashBack
@@ -44,12 +44,12 @@ module.exports = {
 	async getPurschases (req, res){
 		try {
 			let saller_id = req.params.id;
-			let cpf = req.query.cpf;
+			let doc = req.query.doc;
 			let page = req.query.page || 0;
 			let skip = page * 10;
 			
 			let query = {};
-			if(cpf) query = { cpf: cpf };
+			if(doc) query = { doc: doc };
 			else if(saller_id) query = { saller_id: saller_id };
 			
 			let found = [];

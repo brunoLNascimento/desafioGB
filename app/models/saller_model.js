@@ -4,7 +4,7 @@ autoincrement = require('mongoose-sequence')(mongoose);
 
 const saller = new Schema({
   fullName: { type: String, required: true },
-  cpf: { type: String, required: true, unique: true, max: 11  },
+  doc: { type: String, required: true, unique: true, max: 11  },
   email: { type: String, required: true, unique: true },
   password: { type: String, required: true },
   token: { type: String, required: true },

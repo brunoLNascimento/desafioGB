@@ -7,7 +7,7 @@ const purschase = new Schema({
   code: { type: String, required: true },
   value: { type: Number, required: true },
   date: { type: String },
-  cpf: { type: String, max: 11 },
+  doc: { type: String, max: 11 },
   status: { type: String },
   cashBack: {type: Number }
 

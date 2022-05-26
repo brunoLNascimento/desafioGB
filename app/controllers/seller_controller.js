@@ -3,19 +3,23 @@ const Saller = mongoose.model('Saller')
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 const secret = process.env.JWT_SECRET;
-const validator = require("email-validator");
+const validatorEmail = require("email-validator");
+const { cpf } = require("cpf-cnpj-validator");
 const { getError } = require('./../utils/getErros');
 
 module.exports = {
 	async newSaller (req, res) {
 		try {
-			let { fullName, cpf, email, password } = req.body;
+			let { fullName, doc, email, password } = req.body;
 
-			let isValid = validator.validate(email);
-			// if(!isValid) throw new Error("Email is not valid");
+			let isValid = validatorEmail.validate(email);
+			if(!isValid) throw new Error("Email is not valid");
+
+			let isCpfValid = cpf.isValid(doc);
+			if(!isCpfValid) throw new Error("Email is not valid");
 		
 			await Promise.all([ 
-				Saller.find({ cpf: cpf }),  
+				Saller.find({ doc: doc }),  
 				Saller.find({ email: email })
 			]).then(res => {
 				if(res[0][0] || res[1][0])
