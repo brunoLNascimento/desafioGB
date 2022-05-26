@@ -15,4 +15,4 @@ module.exports = {
 			return res.status(e.code).send(e);
 		}
 	}
-}
+};
