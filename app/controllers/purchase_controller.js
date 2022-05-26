@@ -18,7 +18,7 @@ module.exports = {
 			if(!token.includes(userFound.token)) throw new Error('token-incorrect');
 
 			let status = "Em Validação";
-			if(userFound.cpf == 15350946056) status = "Aprovado"
+			if(userFound.cpf == 15350946056) status = "Aprovado";
 			
 			let cashBack = cashBackValue(value);
 
@@ -35,8 +35,8 @@ module.exports = {
 			const saved = await purschase.save();
 			return res.status(200).json(saved);
 		} catch (error) {
-			console.log(error)
-			const e = getError(error)
+			console.log(error);
+			const e = getError(error);
 			return res.status(e.code).json(e);
 		}
 	},
@@ -48,27 +48,25 @@ module.exports = {
 			let page = req.query.page || 0;
 			let skip = page * 10;
 			
-			let query = { }
-			if(cpf) query = { cpf: cpf }
+			let query = {};
+			if(cpf) query = { cpf: cpf };
 			else if(saller_id) query = { saller_id: saller_id };
 			
-			let found = []
-			let cashBackTotal = []
-			let cashBackValueTotal = 0
+			let found = [];
+			let cashBackTotal = [];
+			let cashBackValueTotal = 0;
 			
 			await Promise.all([ 
 				Purschase.find( query ).limit(10).skip(skip),  
 				Purschase.find( query )
 			]).then(res => {
 				found = res[0];
-				cashBackTotal = res[1]
-			})
+				cashBackTotal = res[1];
+			});
 			
 			cashBackTotal.forEach(el => {
-				console.log(el.value)
-				cashBackValueTotal = cashBackValueTotal + el.cashBack	
-				console.log(cashBackValueTotal)
-			})
+				cashBackValueTotal = cashBackValueTotal + el.cashBack;
+			});
 
 			return res. status(200).json({
 				totalPerPage: found.length,
@@ -78,24 +76,24 @@ module.exports = {
 			});
 
 		} catch (error) {
-			console.log(error)
-			const e = getError(error)
+			console.log(error);
+			const e = getError(error);
 			return res.status(e.code).json(e);
 		}
 	}
 }
 
 const cashBackValue = (value) => {
-	let cashBack = {}
+	let cashBack = {};
 	switch (true){
 		case (value) > 1500:
 			cashBack = (Math.floor(value * 20) / 100).toFixed(2);
 			break;
 		case (value >= 1000 && value <= 1500):
-			cashBack = (Math.floor(value * 15) / 100).toFixed(2)
+			cashBack = (Math.floor(value * 15) / 100).toFixed(2);
 			break;
 		default:
-			cashBack = (Math.floor(value * 10) / 100).toFixed(2) 
+			cashBack = (Math.floor(value * 10) / 100).toFixed(2);
 	}
-	return cashBack
+	return cashBack;
 };

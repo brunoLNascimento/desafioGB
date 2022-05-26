@@ -12,17 +12,17 @@ module.exports = {
 			let { fullName, cpf, email, password } = req.body;
 
 			let isValid = validator.validate(email);
-			if(!isValid) throw new Error("Email is not valid")
+			if(!isValid) throw new Error("Email is not valid");
 		
 			await Promise.all([ 
 				Saller.find({ cpf: cpf }),  
 				Saller.find({ email: email })
 			]).then(res => {
-				if(res[0][0] || res[1][0])
+				if(res[0][0] || res[1][0]);
 					throw new Error("CPF or Email already exist");
 			})
 
-			password = await bcrypt.hash(password, 10)   
+			password = await bcrypt.hash(password, 10)   ;
 			
 			const token = jwt.sign(req.body, secret);
 			const saller = new Saller ({
@@ -31,13 +31,13 @@ module.exports = {
 					email: email,
 					password: password,
 					token: token
-			})
+			});
 
 			const saved = await saller.save();
 			return res.status(200).json(saved);
 		} catch (error) {
-			console.log(error)
-			const e = getError(error)
+			console.log(error);
+			const e = getError(error);
 			return res.status(e.code).json(e);
 		}
 	},
@@ -49,16 +49,16 @@ module.exports = {
 			let page = req.query.page || 0;
 			let skip = page * 10;
 			
-			let query = { }
-			if(cpf) query = { cpf: cpf }
+			let query = {};
+			if(cpf) query = { cpf: cpf };
 			else if(saller_id) query = { saller_id: saller_id };
 
 			let found = await Saller.find(query).limit(10).skip(skip);
 			return res.status(200).send({total: found.length, data: found});
 		} catch (error) {
-			console.log(error)
-			const e = getError(error)
+			console.log(error);
+			const e = getError(error);
 			return res.status(e.code).send(e);
 		}
 	}
-}
+};

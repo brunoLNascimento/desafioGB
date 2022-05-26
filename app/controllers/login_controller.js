@@ -16,9 +16,9 @@ module.exports = {
   
       return res.status(200).send({ accessToken: token });
     } catch (error) {
-      console.log(error)
-      const e = getError(error)
+      console.log(error);
+      const e = getError(error);
       return res.status(e.code).json(e);
     }
   }
-}
+};
