@@ -28,10 +28,6 @@ db.on('connecting', function() {
     console.log('MongoDB: Conectando...');
 });
 
-db.on('error', function(error) { 
-    if(err) mongoose.disconnect 
-});
-
 db.on('connected', function() {
     console.log('MongoDB: conectado!');
 });

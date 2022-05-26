@@ -31,7 +31,7 @@ module.exports = {
 			const token = jwt.sign(req.body, secret);
 			const saller = new Saller ({
 					fullName: fullName,
-					cpf: cpf,
+					doc: doc,
 					email: email,
 					password: password,
 					token: token
@@ -49,12 +49,12 @@ module.exports = {
 	async getSaller (req, res){
 		try {
 			let saller_id = req.params.id;
-			let cpf = req.query.cpf;
+			let doc = req.query.doc;
 			let page = req.query.page || 0;
 			let skip = page * 10;
 			
 			let query = {};
-			if(cpf) query = { cpf: cpf };
+			if(doc) query = { doc: doc };
 			else if(saller_id) query = { saller_id: saller_id };
 
 			let found = await Saller.find(query).limit(10).skip(skip);
