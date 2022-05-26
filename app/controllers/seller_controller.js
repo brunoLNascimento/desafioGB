@@ -12,17 +12,17 @@ module.exports = {
 			let { fullName, cpf, email, password } = req.body;
 
 			let isValid = validator.validate(email);
-			if(!isValid) throw new Error("Email is not valid");
+			// if(!isValid) throw new Error("Email is not valid");
 		
 			await Promise.all([ 
 				Saller.find({ cpf: cpf }),  
 				Saller.find({ email: email })
 			]).then(res => {
-				if(res[0][0] || res[1][0]);
+				if(res[0][0] || res[1][0])
 					throw new Error("CPF or Email already exist");
 			})
 
-			password = await bcrypt.hash(password, 10)   ;
+			password = await bcrypt.hash(password, 10);
 			
 			const token = jwt.sign(req.body, secret);
 			const saller = new Saller ({

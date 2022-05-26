@@ -8,7 +8,9 @@ module.exports = {
     try {
       const { email, password } = req.body;
       const token = req.headers.authorization;
+      
       let user = await Saller.findOne({ email }).select('+password');
+      if(!user) throw new Error("Please verify email or password");
 
       const compare = await bcrypt.compare(password, user.password);
   
