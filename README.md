@@ -3,7 +3,7 @@
 ### Rodando o sistema
 ```sh
 $ npm install -- Instalar as dependências.
-$ npm start -- Rodar o sistema.
+$ npm start-dev -- Rodar o sistema.
 ```
 
 1. Post localhost:3000/saller
