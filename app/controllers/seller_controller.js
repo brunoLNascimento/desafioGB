@@ -16,7 +16,7 @@ module.exports = {
 			if(!isValid) throw new Error("Email is not valid");
 
 			let isCpfValid = cpf.isValid(doc);
-			if(!isCpfValid) throw new Error("Email is not valid");
+			if(!isCpfValid) throw new Error("Doc is not valid");
 		
 			await Promise.all([ 
 				Saller.find({ doc: doc }),  

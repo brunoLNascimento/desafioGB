@@ -1,0 +1,981 @@
+{
+	"info": {
+		"_postman_id": "1fcaaae9-3e03-43bc-9913-2a39ce403bea",
+		"name": "desafioGb",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Salvar vendedor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fullName\": \"Vendedora status aprovado\",\r\n    \"doc\": \"15350946056\",\r\n    \"email\": \"aprovado@teste.com.br\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/saller",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"saller"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Salvar vendedor",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullName\": \"Vendedora status aprovado\",\r\n    \"doc\": \"15350946056\",\r\n    \"email\": \"teste@teste.com.br\",\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/saller",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"saller"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET,PUT,POST,DELETE,OPTIONS"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "437"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1b5-DsQBk3wCitSnp79m/4tIUrFmHlI\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 27 May 2022 14:54:41 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"fullName\": \"Vendedora status aprovado\",\n    \"doc\": \"15350946056\",\n    \"email\": \"teste@teste.com.br\",\n    \"password\": \"$2b$10$olRC6S8rZXQ8vwMyr4OduOQV7pWX7D7ZCzPHw0bk9/UlYGE2cBwg.\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmdWxsTmFtZSI6IlZlbmRlZG9yYSBzdGF0dXMgYXByb3ZhZG8iLCJkb2MiOiIxNTM1MDk0NjA1NiIsImVtYWlsIjoidGVzdGVAdGVzdGUuY29tLmJyIiwicGFzc3dvcmQiOiIxMjM0NTYiLCJpYXQiOjE2NTM2NjMyODF9.ZlpzLi3Sss77X0pCpgEUQ7xWiLTUTYcmdIioKEyvsv0\",\n    \"saller_id\": 1\n}"
+				},
+				{
+					"name": "Salvar vendedor",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullName\": \"Vendedora status aprovado\",\r\n    \"doc\": \"15350946056\",\r\n    \"email\": \"aprovado@teste.com.br\",\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/saller",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"saller"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET,PUT,POST,DELETE,OPTIONS"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "444"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1bc-fQ+AQEB4/vBaeTdr8lbkTBJ1b6Y\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 27 May 2022 15:00:38 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"fullName\": \"Vendedora status aprovado\",\n    \"doc\": \"15350946056\",\n    \"email\": \"aprovado@teste.com.br\",\n    \"password\": \"$2b$10$LX7dFNq/r8kdIyslDpjNyO73jdiX4zcW5FxEbX7dIvhtM3db3iDLC\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmdWxsTmFtZSI6IlZlbmRlZG9yYSBzdGF0dXMgYXByb3ZhZG8iLCJkb2MiOiIxNTM1MDk0NjA1NiIsImVtYWlsIjoiYXByb3ZhZG9AdGVzdGUuY29tLmJyIiwicGFzc3dvcmQiOiIxMjM0NTYiLCJpYXQiOjE2NTM2NjM2Mzh9.0YZks9il8KuJWDzmzMMCg-LI18k69IZ5MqxgzWgyluw\",\n    \"saller_id\": 5\n}"
+				},
+				{
+					"name": "Salvar vendedor",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullName\": \"Vendedora status aprovado\",\r\n    \"doc\": \"15350946056\",\r\n    \"email\": \"aprovado@teste.com.br\",\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/saller",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"saller"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET,PUT,POST,DELETE,OPTIONS"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "444"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1bc-143T6SEh94FojdX1BDUjhZ72frQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 27 May 2022 15:09:57 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"fullName\": \"Vendedora status aprovado\",\n    \"doc\": \"15350946056\",\n    \"email\": \"aprovado@teste.com.br\",\n    \"password\": \"$2b$10$hABGG4HzudPzmPQKZ96OJusklR/PrLWikl93bsbzwJmd97oi6PX1a\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmdWxsTmFtZSI6IlZlbmRlZG9yYSBzdGF0dXMgYXByb3ZhZG8iLCJkb2MiOiIxNTM1MDk0NjA1NiIsImVtYWlsIjoiYXByb3ZhZG9AdGVzdGUuY29tLmJyIiwicGFzc3dvcmQiOiIxMjM0NTYiLCJpYXQiOjE2NTM2NjQxOTd9.KAXdRjzYyRQxnR1hAbpGXUmu5vThA-5DwsMOsY674-4\",\n    \"saller_id\": 6\n}"
+				}
+			]
+		},
+		{
+			"name": "Busca vendedor",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fullName\": \"Vendedora status aprovado\",\r\n    \"cpf\": 15350946056,\r\n    \"email\": \"teste@teste.com.br\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/saller/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"saller",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Busca vendedor",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullName\": \"Vendedora status aprovado\",\r\n    \"cpf\": 15350946056,\r\n    \"email\": \"teste@teste.com.br\",\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/saller/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"saller",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET,PUT,POST,DELETE,OPTIONS"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "2092"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"82c-EP3QCCCwN6swHi25WILN1d81Ty8\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 27 May 2022 15:09:04 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"total\": 5,\n    \"data\": [\n        {\n            \"fullName\": \"Jose test\",\n            \"doc\": \"15350946057\",\n            \"email\": \"teste@teste.com.br\",\n            \"password\": \"$2b$10$olRC6S8rZXQ8vwMyr4OduOQV7pWX7D7ZCzPHw0bk9/UlYGE2cBwg.\",\n            \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmdWxsTmFtZSI6IlZlbmRlZG9yYSBzdGF0dXMgYXByb3ZhZG8iLCJkb2MiOiIxNTM1MDk0NjA1NiIsImVtYWlsIjoidGVzdGVAdGVzdGUuY29tLmJyIiwicGFzc3dvcmQiOiIxMjM0NTYiLCJpYXQiOjE2NTM2NjMyODF9.ZlpzLi3Sss77X0pCpgEUQ7xWiLTUTYcmdIioKEyvsv0\",\n            \"saller_id\": 1\n        },\n        {\n            \"fullName\": \"bruno teste\",\n            \"doc\": \"05759852752\",\n            \"email\": \"teste1@teste.com.br\",\n            \"password\": \"$2b$10$E.tva999LN3rkHLeT8Oet.grzJr2h9miYkDLZvavyelUMXsaLa6LS\",\n            \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmdWxsTmFtZSI6ImJydW5vIHRlc3RlIiwiZG9jIjoiMDU3NTk4NTI3NTIiLCJlbWFpbCI6InRlc3RlMUB0ZXN0ZS5jb20uYnIiLCJwYXNzd29yZCI6IjEyMzQ1NiIsImlhdCI6MTY1MzY2MzQ0OH0.MhFzk_JVanpJCCU_dBu_FVYKPziY9bsFlQrQ3TsX-dE\",\n            \"saller_id\": 2\n        },\n        {\n            \"fullName\": \"Joao teste\",\n            \"doc\": \"14262550044\",\n            \"email\": \"test@teste.com.br\",\n            \"password\": \"$2b$10$mVkvsghm/EvQJiEbTu8/fecDFZ5NlNp.jJPWDAcgCHEe5phead8.2\",\n            \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmdWxsTmFtZSI6IkpvYW8gdGVzdGUiLCJkb2MiOiIxNDI2MjU1MDA0NCIsImVtYWlsIjoidGVzdEB0ZXN0ZS5jb20uYnIiLCJwYXNzd29yZCI6IjEyMzQ1NiIsImlhdCI6MTY1MzY2MzQ5MH0.ZP2mPSE1QtrTOIwXns_3EpMJ2eSCBs13onZzLGZi3cA\",\n            \"saller_id\": 3\n        },\n        {\n            \"fullName\": \"Maria teste\",\n            \"doc\": \"93199455000\",\n            \"email\": \"test@teste.com\",\n            \"password\": \"$2b$10$rU4qENW24SxsTIDDzpV3T.sT3uYjC69107R2wjAQ88DoO/uCj2MG2\",\n            \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmdWxsTmFtZSI6Ik1hcmlhIHRlc3RlIiwiZG9jIjoiOTMxOTk0NTUwMDAiLCJlbWFpbCI6InRlc3RAdGVzdGUuY29tIiwicGFzc3dvcmQiOiIxMjM0NTYiLCJpYXQiOjE2NTM2NjM1MDN9.6l2XnkmFAVmXC7Z4jVic0MPaE4wG2H-HhsJAh0C48a8\",\n            \"saller_id\": 4\n        },\n        {\n            \"fullName\": \"Vendedora status aprovado\",\n            \"doc\": \"15350946056\",\n            \"email\": \"aprovado@teste.com.br\",\n            \"password\": \"$2b$10$LX7dFNq/r8kdIyslDpjNyO73jdiX4zcW5FxEbX7dIvhtM3db3iDLC\",\n            \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmdWxsTmFtZSI6IlZlbmRlZG9yYSBzdGF0dXMgYXByb3ZhZG8iLCJkb2MiOiIxNTM1MDk0NjA1NiIsImVtYWlsIjoiYXByb3ZhZG9AdGVzdGUuY29tLmJyIiwicGFzc3dvcmQiOiIxMjM0NTYiLCJpYXQiOjE2NTM2NjM2Mzh9.0YZks9il8KuJWDzmzMMCg-LI18k69IZ5MqxgzWgyluw\",\n            \"saller_id\": 5\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Busca vendedor por ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fullName\": \"Vendedora status aprovado\",\r\n    \"cpf\": 15350946056,\r\n    \"email\": \"teste@teste.com.br\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/saller/2",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"saller",
+						"2"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Busca vendedor por ID",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullName\": \"Vendedora status aprovado\",\r\n    \"cpf\": 15350946056,\r\n    \"email\": \"teste@teste.com.br\",\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/saller/2",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"saller",
+								"2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET,PUT,POST,DELETE,OPTIONS"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "428"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1ac-VmBukuSYazA9/cjzFQLSUefYxKI\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 27 May 2022 15:08:47 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"total\": 1,\n    \"data\": [\n        {\n            \"fullName\": \"bruno teste\",\n            \"doc\": \"05759852752\",\n            \"email\": \"teste1@teste.com.br\",\n            \"password\": \"$2b$10$E.tva999LN3rkHLeT8Oet.grzJr2h9miYkDLZvavyelUMXsaLa6LS\",\n            \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmdWxsTmFtZSI6ImJydW5vIHRlc3RlIiwiZG9jIjoiMDU3NTk4NTI3NTIiLCJlbWFpbCI6InRlc3RlMUB0ZXN0ZS5jb20uYnIiLCJwYXNzd29yZCI6IjEyMzQ1NiIsImlhdCI6MTY1MzY2MzQ0OH0.MhFzk_JVanpJCCU_dBu_FVYKPziY9bsFlQrQ3TsX-dE\",\n            \"saller_id\": 2\n        }\n    ]\n}"
+				},
+				{
+					"name": "Busca vendedor por ID",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullName\": \"Vendedora status aprovado\",\r\n    \"cpf\": 15350946056,\r\n    \"email\": \"teste@teste.com.br\",\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/saller/5",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"saller",
+								"5"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET,PUT,POST,DELETE,OPTIONS"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "465"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1d1-rt/+ImBcEUdiC3CcuvLXvSVBiZs\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 27 May 2022 15:08:31 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"total\": 1,\n    \"data\": [\n        {\n            \"fullName\": \"Vendedora status aprovado\",\n            \"doc\": \"15350946056\",\n            \"email\": \"aprovado@teste.com.br\",\n            \"password\": \"$2b$10$LX7dFNq/r8kdIyslDpjNyO73jdiX4zcW5FxEbX7dIvhtM3db3iDLC\",\n            \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmdWxsTmFtZSI6IlZlbmRlZG9yYSBzdGF0dXMgYXByb3ZhZG8iLCJkb2MiOiIxNTM1MDk0NjA1NiIsImVtYWlsIjoiYXByb3ZhZG9AdGVzdGUuY29tLmJyIiwicGFzc3dvcmQiOiIxMjM0NTYiLCJpYXQiOjE2NTM2NjM2Mzh9.0YZks9il8KuJWDzmzMMCg-LI18k69IZ5MqxgzWgyluw\",\n            \"saller_id\": 5\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Busca vendedor por CPF",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fullName\": \"Vendedora status aprovado\",\r\n    \"cpf\": 15350946056,\r\n    \"email\": \"teste@teste.com.br\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/saller?doc=15350946056",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"saller"
+					],
+					"query": [
+						{
+							"key": "doc",
+							"value": "15350946056"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Busca vendedor por CPF",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullName\": \"Vendedora status aprovado\",\r\n    \"cpf\": 15350946056,\r\n    \"email\": \"teste@teste.com.br\",\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/saller?doc=15350946056",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"saller"
+							],
+							"query": [
+								{
+									"key": "doc",
+									"value": "15350946056"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET,PUT,POST,DELETE,OPTIONS"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "465"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1d1-rt/+ImBcEUdiC3CcuvLXvSVBiZs\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 27 May 2022 15:08:13 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"total\": 1,\n    \"data\": [\n        {\n            \"fullName\": \"Vendedora status aprovado\",\n            \"doc\": \"15350946056\",\n            \"email\": \"aprovado@teste.com.br\",\n            \"password\": \"$2b$10$LX7dFNq/r8kdIyslDpjNyO73jdiX4zcW5FxEbX7dIvhtM3db3iDLC\",\n            \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmdWxsTmFtZSI6IlZlbmRlZG9yYSBzdGF0dXMgYXByb3ZhZG8iLCJkb2MiOiIxNTM1MDk0NjA1NiIsImVtYWlsIjoiYXByb3ZhZG9AdGVzdGUuY29tLmJyIiwicGFzc3dvcmQiOiIxMjM0NTYiLCJpYXQiOjE2NTM2NjM2Mzh9.0YZks9il8KuJWDzmzMMCg-LI18k69IZ5MqxgzWgyluw\",\n            \"saller_id\": 5\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmdWxsTmFtZSI6Im5yb3ViIG9uaSIsImNwZiI6MzU4NTg5NTY3ODgsImVtYWlsIjoiYyIsInBhc3N3b3JkIjoiMTIzNDU2IiwiaWF0IjoxNjUzNDkyOTMyfQ.Ibwr0EBTnXoIYqfqTbezNM0wdcvMPjCyoelIT1vdr88",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"aprovado@teste.com.br\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmdWxsTmFtZSI6Im5yb3ViIG9uaSIsImNwZiI6MzU4NTg5NTY3ODgsImVtYWlsIjoiYyIsInBhc3N3b3JkIjoiMTIzNDU2IiwiaWF0IjoxNjUzNDkyOTMyfQ.Ibwr0EBTnXoIYqfqTbezNM0wdcvMPjCyoelIT1vdr88",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"aprovado@teste.com.br\",\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET,PUT,POST,DELETE,OPTIONS"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "221"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"dd-OCgmJKLjE38ECFgorWnCxmLfhH8\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 27 May 2022 15:10:30 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"accessToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmdWxsTmFtZSI6Im5yb3ViIG9uaSIsImNwZiI6MzU4NTg5NTY3ODgsImVtYWlsIjoiYyIsInBhc3N3b3JkIjoiMTIzNDU2IiwiaWF0IjoxNjUzNDkyOTMyfQ.Ibwr0EBTnXoIYqfqTbezNM0wdcvMPjCyoelIT1vdr88\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Cadastrar venda",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmdWxsTmFtZSI6IlZlbmRlZG9yYSBzdGF0dXMgYXByb3ZhZG8iLCJkb2MiOiIxNTM1MDk0NjA1NiIsImVtYWlsIjoiYXByb3ZhZG9AdGVzdGUuY29tLmJyIiwicGFzc3dvcmQiOiIxMjM0NTYiLCJpYXQiOjE2NTM2NjQxOTd9.KAXdRjzYyRQxnR1hAbpGXUmu5vThA-5DwsMOsY674-4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"saller_id\": 6,\r\n    \"code\": 1322,\r\n    \"value\": 15000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/purschase",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"purschase"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Cadastrar venda",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmdWxsTmFtZSI6IlZlbmRlZG9yYSBzdGF0dXMgYXByb3ZhZG8iLCJkb2MiOiIxNTM1MDk0NjA1NiIsImVtYWlsIjoiYXByb3ZhZG9AdGVzdGUuY29tLmJyIiwicGFzc3dvcmQiOiIxMjM0NTYiLCJpYXQiOjE2NTM2NjQxOTd9.KAXdRjzYyRQxnR1hAbpGXUmu5vThA-5DwsMOsY674-4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"saller_id\": 6,\r\n    \"code\": 1322,\r\n    \"value\": 15000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/purschase",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"purschase"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET,PUT,POST,DELETE,OPTIONS"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "149"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"95-47XsM1WVcgLrmXQYM/ycGjOWTGA\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 27 May 2022 15:24:12 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": \"1322\",\n    \"value\": 15000,\n    \"date\": \"27/05/2022 - 12:24:76\",\n    \"doc\": \"15350946056\",\n    \"saller_id\": \"6\",\n    \"status\": \"Aprovado\",\n    \"cashBack\": 3000,\n    \"purschase_id\": 7\n}"
+				}
+			]
+		},
+		{
+			"name": "Consulta venda",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/purschase/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"purschase",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Consulta venda",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/purschase/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"purschase",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET,PUT,POST,DELETE,OPTIONS"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1583"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"62f-QSXap511AIhlN1s7dJF6DLKxl/w\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 27 May 2022 15:28:29 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"totalPerPage\": 10,\n    \"page\": 0,\n    \"cashBackValueTotal\": 30345,\n    \"data\": [\n        {\n            \"code\": \"1322\",\n            \"value\": 15000,\n            \"date\": \"27/05/2022 - 12:20:05\",\n            \"doc\": \"15350946056\",\n            \"saller_id\": \"6\",\n            \"status\": \"Aprovado\",\n            \"cashBack\": 3000,\n            \"purschase_id\": 1\n        },\n        {\n            \"code\": \"1322\",\n            \"value\": 15000,\n            \"date\": \"27/05/2022 - 12:21:62\",\n            \"doc\": \"15350946056\",\n            \"saller_id\": \"6\",\n            \"status\": \"Aprovado\",\n            \"cashBack\": 3000,\n            \"purschase_id\": 2\n        },\n        {\n            \"code\": \"1322\",\n            \"value\": 15000,\n            \"date\": \"27/05/2022 - 12:21:72\",\n            \"doc\": \"15350946056\",\n            \"saller_id\": \"6\",\n            \"status\": \"Aprovado\",\n            \"cashBack\": 3000,\n            \"purschase_id\": 3\n        },\n        {\n            \"code\": \"1322\",\n            \"value\": 15000,\n            \"date\": \"27/05/2022 - 12:21:96\",\n            \"doc\": \"15350946056\",\n            \"saller_id\": \"6\",\n            \"status\": \"Aprovado\",\n            \"cashBack\": 3000,\n            \"purschase_id\": 4\n        },\n        {\n            \"code\": \"1322\",\n            \"value\": 15000,\n            \"date\": \"27/05/2022 - 12:22:84\",\n            \"doc\": \"15350946056\",\n            \"saller_id\": \"6\",\n            \"status\": \"Aprovado\",\n            \"cashBack\": 3000,\n            \"purschase_id\": 5\n        },\n        {\n            \"code\": \"1322\",\n            \"value\": 15000,\n            \"date\": \"27/05/2022 - 12:23:08\",\n            \"doc\": \"15350946056\",\n            \"saller_id\": \"6\",\n            \"status\": \"Aprovado\",\n            \"cashBack\": 3000,\n            \"purschase_id\": 6\n        },\n        {\n            \"code\": \"1322\",\n            \"value\": 15000,\n            \"date\": \"27/05/2022 - 12:24:76\",\n            \"doc\": \"15350946056\",\n            \"saller_id\": \"6\",\n            \"status\": \"Aprovado\",\n            \"cashBack\": 3000,\n            \"purschase_id\": 7\n        },\n        {\n            \"code\": \"1322\",\n            \"value\": 15000,\n            \"date\": \"27/05/2022 - 12:26:03\",\n            \"doc\": \"15350946057\",\n            \"saller_id\": \"1\",\n            \"status\": \"Em Validação\",\n            \"cashBack\": 3000,\n            \"purschase_id\": 8\n        },\n        {\n            \"code\": \"1322\",\n            \"value\": 15000,\n            \"date\": \"27/05/2022 - 12:26:44\",\n            \"doc\": \"15350946057\",\n            \"saller_id\": \"1\",\n            \"status\": \"Em Validação\",\n            \"cashBack\": 3000,\n            \"purschase_id\": 9\n        },\n        {\n            \"code\": \"1322\",\n            \"value\": 15000,\n            \"date\": \"27/05/2022 - 12:26:21\",\n            \"doc\": \"15350946057\",\n            \"saller_id\": \"1\",\n            \"status\": \"Em Validação\",\n            \"cashBack\": 3000,\n            \"purschase_id\": 10\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Url consulta boticario",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/cashback/05759852752",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cashback",
+						"05759852752"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

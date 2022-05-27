@@ -7,7 +7,6 @@ module.exports = {
   async LoginController (req, res) {
     try {
       const { email, password } = req.body;
-      const token = req.headers.authorization;
       
       let user = await Saller.findOne({ email }).select('+password');
       if(!user) throw new Error("Please verify email or password");
@@ -15,7 +14,7 @@ module.exports = {
       const compare = await bcrypt.compare(password, user.password);
       if (!compare) throw new Error('user-or-password-incorrect');
   
-      return res.status(200).send({ accessToken: token });
+      return res.status(200).send({ accessToken: user.token });
     } catch (error) {
       console.log(error);
       const e = getError(error);
